@@ -1,0 +1,1 @@
+"./source/wx315.obj" "./source/window.obj" "./source/wdt.obj" "./source/tempnew.obj" "./source/rgb.obj" "./source/led.obj" "./source/key.obj" "./source/clock.obj" "./source/TimerA.obj" "./source/HC05.obj" "./source/DHT11.obj" "./main.obj" "../lnk_msp430g2553.cmd" -l"libc.a" 
