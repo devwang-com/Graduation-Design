@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+            <td id="LatestNews" height="330" align="center" valign="top" class="font14" style="border: #7baed9 solid 1px;border-top: none; padding: 10px;">
+            </td>
+        </tr>
+    </table>
+
+	<script src="jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+    	$(function() {
+            $.ajax({
+                type: "POST",
+                url: "index.php",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                success: function(data) {
+                    $("#LatestNews").html(data);
+                }, 
+                error: function(error) {
+                $("#LatestNews").html("尚未发布任何信息！"+error+"!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

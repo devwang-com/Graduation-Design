@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table width="100%" border="0" cellspacing="0" cellpadding="5">
+        <tr>
+            <td id="LatestNews" height="330" align="center" valign="top" class="font14" style="border: #7baed9 solid 1px;border-top: none; padding: 10px;">
+            </td>
+        </tr>
+    </table>
+
+	<script src="jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+    setInterval(updata,500);//每0.5秒执行一次update方法
+});
+    	function updata() {
+            $.ajax({
+                type: "POST",
+                url: "readSQL.php",
+                contentType: "application/text;charset=utf-8",//这里要注意contentType数据类型 是text 不是json
+                dataType: "text",//这里要注意dataType数据类型 是text 不是json
+                success: function(data) {
+                    $("#LatestNews").html(data);
+                }, 
+                error: function(error) {
+                $("#LatestNews").html("未发布任何信息"+error);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
