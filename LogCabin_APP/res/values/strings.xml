@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <!-- Bluetooth Chat -->
+    <string name="app_name">小木屋</string>
+
+    <!--  BluetoothChat -->
+    <!--  You are not connected to a device -->
+    <string name="not_connected">您没有连接设备</string>
+    <!--  Bluetooth was not enabled. Leaving Bluetooth Chat. -->
+    <string name="bt_not_enabled_leaving">蓝牙没有打开</string>
+    <!-- connecting... -->
+    <string name="title_connecting">正在连接...</string>
+    <!--  connected:-->
+    <string name="title_connected_to">已连接： </string>
+    <!--  not connected-->
+    <string name="title_not_connected">没有连接</string>
+
+    <!--  DeviceListActivity -->
+    <!-- scanning for devices... -->
+    <string name="scanning">正在查找设备...</string>
+    <!-- select a device to connect -->
+    <string name="select_device">选择一个设备连接</string>
+    <!-- No devices have been paired -->
+    <string name="none_paired">没有已经配对的设备</string>
+    <!-- No devices found -->
+    <string name="none_found">没有找到设备</string>
+    <!--  Paired Devices-->
+    <string name="title_paired_devices">配对了的设备</string>
+    <!-- Other Available Devices -->
+    <string name="title_other_devices">其他可用的设备</string>
+    <!-- Scan for devices -->
+    <string name="button_scan">扫描设备</string>
+
+    <!-- Options Menu -->
+    <!-- Connect a device - Secure -->
+    <string name="secure_connect">连接设备 - 安全</string>
+    <!-- Connect a device - Insecure -->
+    <string name="insecure_connect">连接设备 - 不安全</string>
+    <!--  Make discoverable-->
+    <string name="discoverable">使被发现</string>
+    
+ 
+	<!-- 红red、橙orange、黄yellow、绿green、蓝blue、 紫purple -->
+    <string name="red">Red</string>
+    <string name="orange">Orange</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="purple">Purple</string>
+    <string name="start_app">Six Color</string>
+    
+    <string name="str_college">湖南工业大学\n电气与信息工程学院 \n老师：黄晓峰 \n成员：李博、王炜、陆福红、李浩、庞海霞、杨融融</string>
+    <string name="str_school">学校</string>
+    <string name="str_app_update_sure">确定</string>
+    <string name="str_app_update_pass_toast">密码正确！已进入开发者模式，长按右边的二维码下载最新APP更新~</string>
+    <string name="http_devwang_sinaapp_com_logcabin_logcabin_web_php">http://devwang.sinaapp.com/LogCabin/LogCabin_Web.php</string>
+    <string name="str_open_scan_access_web">亲！打开扫一扫，访问网页~</string>
+    <string name="str_open_scan_down_app">亲！打开扫一扫，下载APP~</string>
+    <string name="str_dev_func">高级 开发者功能</string>
+    <string name="str_devloper">开发者</string>
+    <string name="str_college_team_info">学校学院 团队信息</string>
+    <string name="str_voice_what">语音有哪些？</string>
+    <string name="str_text_cmd_what">指令有哪些？</string>
+    <string name="str_web_url">Web网址</string>
+    <string name="str_sync_ing">正在同步..</string>
+    <string name="str_btn_music_error">按键响应音频发生错误:</string>
+    <string name="cstr_conn_device">已连接设备：</string>
+    <string name="str_red">红</string>
+    <string name="str_orange">橙</string>
+    <string name="str_yellow">黄</string>
+    <string name="str_green">绿</string>
+    <string name="str_blue">蓝</string>
+    <string name="str_purple">紫</string>
+    <string name="str_led">灯</string>
+    <string name="str_open">开</string>
+    <string name="str_close">关</string>
+    <string name="str_window">窗</string>
+    <string name="xml_open_led">开灯</string>
+    <string name="xml_close_led">关灯</string>
+    <string name="xml_unconn_bt">断开</string>
+    <string name="xml_conn_bt">连接</string>
+    <string name="xml_close_window">关窗</string>
+    <string name="xml_open_window">开窗</string>
+    <string name="xml_access_web">访问web</string>
+    <string name="xml_download_app">下载app</string>
+    <string name="xml_sync_web">同步</string>
+    <string name="xml_send_cmd">发送</string>
+    <string name="xml_sned_cmd_hint">文字指令：开灯、红灯、...</string>
+    <string name="xml_rgbled_state_close">关</string>
+    <string name="xml_curr_led_color_state">当前灯颜色状态：</string>
+    <string name="xml_curr_window_state">当前窗户的状态：</string>
+    <string name="xml_temp_make_cold">制冷</string>
+    <string name="xml_temp_make_heat">加热</string>
+    <string name="xml_def_temp_humd">24°C 50%</string>
+    <string name="xml_def_temp_humd_time">13:14</string>
+    <string name="xml_room_real_time_temp_humd">室内实时温湿度：</string>
+    <string name="str_user_has_not_the_permissions">用户无此权限，谢谢~</string>
+    <string name="xml_update_app_please_input_password">更新请输入密码！</string>
+    <string name="str_have_start_sync_data_upto_web">已启用\n定时同步数据到Web服务器功能！</string>
+    <string name="str_hava_stop_sync_data_upto_web">已停用\n定时同步数据到Web服务器功能！</string>
+    <string name="str_devwang_voice_key_appid">appid=54202a57</string>
+    <string name="str_oh_my_dear_you_has_not_say_or_unconn_internet">亲 ！你骗我，你都没有说话~还是您没有联网~</string>
+	
+</resources>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circle="http://schemas.android.com/apk/res/com.devwang.logcabin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/hutview"
+        android:orientation="vertical" >
+         <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="室内实时温湿度：" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/xml_def_temp_humd_time" />
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/xml_def_temp_humd" />
+
+        <Button
+            android:id="@+id/btn_heat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="@string/xml_temp_make_heat" />
+
+        <Button
+            android:id="@+id/btn_cold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="@string/xml_temp_make_cold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/xml_curr_window_state" />
+
+        <TextView
+            android:id="@+id/tv_windows_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/xml_rgbled_state_close" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/xml_curr_led_color_state" />
+
+        <TextView
+            android:id="@+id/tv_rgbled_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/xml_rgbled_state_close" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_tv_msg"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:completionThreshold="1"
+            android:hint="@string/xml_sned_cmd_hint"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_msg_send"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:singleLine="true"
+            android:text="@string/xml_send_cmd" />
+
+        <Button
+            android:id="@+id/btn_sync_web"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:singleLine="true"
+            android:text="@string/xml_sync_web" />
+    </LinearLayout>
+</LinearLayout>
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center" >
+
+        <com.devwang.logcabin.circlergb.CircleLayout
+            android:id="@+id/main_circle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/sixcolor"
+            circle:firstChildPosition="South"
+            circle:isRotating="true"
+            circle:rotateToCenter="true" >
+
+            <com.devwang.logcabin.circlergb.CircleImageView
+                android:id="@+id/main_o_image"
+                circle:name="@string/red"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/icon_rgb_o" />
+
+            <com.devwang.logcabin.circlergb.CircleImageView
+                android:id="@+id/main_y_image"
+                circle:name="@string/purple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_rgb_y" />
+
+            <com.devwang.logcabin.circlergb.CircleImageView
+                android:id="@+id/main_g_image"
+                circle:name="@string/yellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_rgb_g" />
+
+            <com.devwang.logcabin.circlergb.CircleImageView
+                android:id="@+id/main_b_image"
+                circle:name="@string/green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_rgb_b" />
+
+            <com.devwang.logcabin.circlergb.CircleImageView
+                android:id="@+id/main_p_image"
+                circle:name="@string/orange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_rgb_p" />
+
+            <com.devwang.logcabin.circlergb.CircleImageView
+                android:id="@+id/main_r_image"
+                circle:name="@string/blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_rgb_r" />
+        </com.devwang.logcabin.circlergb.CircleLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/qrAppButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/logcabin_app_qr" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="@string/xml_download_app" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/voiceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_style_voice"
+            android:gravity="center_horizontal"
+            android:textColor="#ffff0000"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/qrWebButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/logcabin_web_qr" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="@string/xml_access_web" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button_open_windows"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="@string/xml_open_window" />
+
+        <Button
+            android:id="@+id/button_close_windows"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="@string/xml_close_window" />
+
+        <Button
+            android:id="@+id/button_bt_conn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="@string/xml_conn_bt" />
+
+        <Button
+            android:id="@+id/button_bt_unconn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="@string/xml_unconn_bt" />
+
+        <Button
+            android:id="@+id/button_openled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="@string/xml_open_led" />
+
+        <Button
+            android:id="@+id/button_closeled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="@string/xml_close_led" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button_mode_back_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="回家模式" />
+
+        <Button
+            android:id="@+id/button_mode_romantic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="浪漫模式" />
+
+        <Button
+            android:id="@+id/button_mode_away_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_style"
+            android:text="离家模式" />
+    </LinearLayout>
+
+</LinearLayout>
